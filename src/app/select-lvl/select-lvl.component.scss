@@ -1,0 +1,38 @@
+#encabezado{
+    display: inline-block;
+}
+
+.centrar{
+    text-align: center;
+}
+
+.borde{
+    margin: 1px;
+    border: 1px solid #bababa;
+}
+
+.caja{
+    height: 400px; 
+    width: 215px;
+}
+
+.imagen{
+    width: 100%;
+    padding-top: 30px;
+}
+
+.facil{
+    
+    padding-top: 120px;
+    width: 70%;
+}
+.medio{
+    
+    padding-top: 50px;
+    width: 60%;
+}
+.dificil{
+    
+    padding-top: 30px;
+    width: 90%;
+}

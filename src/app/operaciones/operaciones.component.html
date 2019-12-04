@@ -1,0 +1,30 @@
+<div style="text-align: center; padding-top: 10px;">
+        <div id="encabezado" class="container borde rounded">
+            <div class="row " style="margin: 10px;">
+                <button style="margin-right: 10px;" class="btn btn-outline-secondary" (click)="volver()">
+                    salir</button> <br>
+    
+                <h6 style="align-self: center;">Modo de juego: {{stipo}} | nivel: {{snivel}}</h6>
+            </div>
+        </div>
+</div>
+<div style="text-align: center; padding-top: 10px;" >
+<div id="encabezado" class="container borde rounded" >
+        
+    <div class="row">
+        <!-- <div class="col borde"><div class="caja"><img src="./assets/estrella.svg" alt="" class="src imagen"></div></div> -->
+        <div class="" *ngFor="let item of lista">
+        <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <img src="./assets/estrella.png" class="imagen">
+                  </div>
+                  <div class="flip-card-back">
+                    {{item}}
+                  </div>
+                </div>
+              </div>
+            </div>
+    </div>        
+</div>
+</div>

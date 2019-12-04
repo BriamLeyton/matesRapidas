@@ -1,0 +1,27 @@
+<div style="text-align: center; padding-top: 10px;">
+    <div id="encabezado" class="container borde rounded">
+        <div class="row " style="margin: 10px;">
+            <button style="margin-right: 10px;" class="btn btn-outline-secondary" (click)="volver()">
+                volver</button> <br>
+
+            <h6 style="align-self: center;">Seleccione para jugar solo o con un rival</h6>
+        </div>
+    </div>
+</div>
+
+<div class="centrar " style="padding-top: 10px;">
+        
+    <div class="btn-group" role="group">
+        
+        <button type="button" class="btn btn-outline-primary" (click)="uno()">
+            <div class="caja">
+                    <img src="./assets/unjugador.svg" alt="" class="src imagen">
+            </div>Un Jugador
+        </button>
+        <button type="button" class="btn btn-outline-info" (click)="dos()">
+            <div class="caja">
+                    <img src="./assets/dosjugadores.svg" alt="" class="src imagen2">
+            </div>Dos Jugadores
+        </button>
+    </div>
+</div>    
