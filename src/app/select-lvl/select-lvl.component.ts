@@ -7,10 +7,10 @@ import { Router, ActivatedRoute } from '@angular/router';
   styleUrls: ['./select-lvl.component.scss']
 })
 export class SelectLvlComponent implements OnInit {
-  private sub:any;
-  private tipo:any;
-  private jugador: string;
-  private nivel: string;
+  public sub:any;
+  public tipo:any;
+  public jugador: string;
+  public nivel: string;
   constructor(
     private route: ActivatedRoute,
     private router: Router) {}

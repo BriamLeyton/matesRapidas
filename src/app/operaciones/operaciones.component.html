@@ -14,12 +14,12 @@
     <div class="row">
         <!-- <div class="col borde"><div class="caja"><img src="./assets/estrella.svg" alt="" class="src imagen"></div></div> -->
         <div class="" *ngFor="let item of lista">
-        <div class="flip-card">
+        <div class="flip-card" >
                 <div class="flip-card-inner">
-                  <div class="flip-card-front">
-                    <img src="./assets/estrella.png" class="imagen">
+                  <div class="flip-card-front" (click)="seleccionar(item, content)">
+                    <img src="./assets/estrella.png" class="imagen" style="margin-top: -15px;" (click)="seleccionar(item, content)">
                   </div>
-                  <div class="flip-card-back">
+                  <div class="flip-card-back" (click)="seleccionar(item, content)">
                     {{item}}
                   </div>
                 </div>
@@ -28,3 +28,48 @@
     </div>        
 </div>
 </div>
+
+<div style="text-align: center; padding-top: 10px;">
+  <div id="encabezado" class="container borde rounded">
+      <div class="row " style="margin: 10px;">
+          <div style="text-align: center;">
+          <h6 >Tiempo restante para seleccionar otra carta {{timeLeft/100}} segundos</h6>
+          <h6 >Tiempo restante de juego {{tiempototal/100}} segundos  </h6>
+        </div>
+      </div>
+  </div>
+</div>
+
+
+<ng-template #content let-modal>
+  <div class="modal-header">
+    <h3 class="modal-title">Resuelva la operacion con los numeros elegidos:</h3>
+<!--     <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button> -->
+  </div>
+  <div class="modal-body" style="display: inline-block; text-align: center;">
+    <p style="font-size: 70px;"><span> {{operacion}}  
+      <!-- <input style="width: 110px;" type="number" (onKeydown)="enter($event)"> -->
+      <input style="width: 130px;" #input matInput [(ngModel)]="resultado" [value]="resultado" type="number" step="0.1" name="input"  (keyup.enter)="enter(resultado)">
+    </span> </p>
+  </div>
+  <div class="modal-footer">
+    <p>presione enter al ingresar el valor</p>
+    <p>tiempo restante para resolver la operacion {{timeLeftoperacion}} </p>
+  </div>
+</ng-template>
+
+
+<ng-template #endgame="ngModel" let-modal [(ngModel)]="endgametext" name="endgame" ngDefaultControl >
+    <div class="modal-header">
+      <h3 class="modal-title">Juego terminado!!!</h3>
+    </div>
+    <div class="modal-footer">
+     <button type="button" class="close" aria-label="Close" (click)="volver()">
+        <span aria-hidden="true">&times;</span>
+      </button> 
+    </div>
+    
+  </ng-template>
+  

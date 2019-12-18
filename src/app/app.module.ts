@@ -8,7 +8,9 @@ import { InicioComponent } from './inicio/inicio.component';
 import { PlayersComponent } from './players/players.component';
 import { ReglasComponent } from './reglas/reglas.component';
 import { OperacionesComponent } from './operaciones/operaciones.component';
-
+import {NgbdModalOptionsModule} from './modal-options/modal-options.module';
+import { FormsModule } from '@angular/forms';
+import { ResultadosComponent } from './resultados/resultados.component';
 
 
 @NgModule({
@@ -19,11 +21,14 @@ import { OperacionesComponent } from './operaciones/operaciones.component';
     PlayersComponent,
     ReglasComponent,
     OperacionesComponent,
+    ResultadosComponent,
     
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    NgbdModalOptionsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

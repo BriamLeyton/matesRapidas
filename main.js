@@ -20,8 +20,8 @@ function createWindow () {
       
       win.show()
     })
-  //win.loadURL(`file://${__dirname}/dist/index.html`)
-  win.loadURL(`http://localhost:4200`)
+  win.loadURL(`file://${__dirname}/dist/index.html`)
+  //win.loadURL(`http://localhost:4200`)
   
   win.on('closed', function () {
     win = null

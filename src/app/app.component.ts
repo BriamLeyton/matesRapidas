@@ -7,9 +7,5 @@ import { RouterOutlet } from '@angular/router';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'matesRapidas';
-  alerta(){
-    alert("hola briam")
-  }
-  
+  title = 'matesRapidas';  
 }

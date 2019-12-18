@@ -13,7 +13,9 @@ export class InicioComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+      //window.location.reload();
   }
+
   seleccionar(){
     this.router.navigate(['/players'])
   }
